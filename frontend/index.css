@@ -1,0 +1,22 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    --clr-primary-black: hsl(0, 0%, 20%);
+    --clr-primary-white: hsl(0, 0%, 100%);
+    --clr-secondary-blue: hsl(240, 100%, 30%);
+    --clr-accent-gold: hsl(50, 100%, 50%);
+    --clr-accent-coral: hsl(0, 80%, 70%);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smooothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body {
+    margin: 0;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+}

@@ -1,0 +1,11 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+}
+.App {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}
