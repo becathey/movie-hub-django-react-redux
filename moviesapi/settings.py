@@ -22,6 +22,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # My apps
     'movies',
+    'rest_framework',
 
     # Default Django apps
     'django.contrib.admin',
