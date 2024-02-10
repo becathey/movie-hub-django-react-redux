@@ -1,17 +1,20 @@
 import React, {useEffect} from 'react'
 import axios from 'axios'
+import { UseDispatch, useDispatch } from 'react-redux'
+import { addMovies } from './src/features/movies/movieSlice'
 import Header from './src/components/Header/Header'
 import Footer from './src/components/Footer/Footer'
 import './App.css'
 
 function App() {
+    const dispatch = useDispatch()
     useEffect(() => {
         const fetchMovies = async () => {
             const result = await axios('/movies/api/movies/')
             .catch((err) => {
                 console.log("Error:", err)
             })
-            console.log(result.data)
+            dispatch(addMovies(result.data))
         }
         fetchMovies()
     }, [])
