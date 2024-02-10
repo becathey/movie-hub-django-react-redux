@@ -1,10 +1,10 @@
 from django.urls import path
-from rest_framework.urlpatterns import format_suffix_patterns
-from movies import views
+from .views import Index
+from .api.views import MovieList, MovieDetail
 
+app_name = "movies"
 urlpatterns = [
-    path('movies/', views.MovieList.as_view()),
-    path('movies/<int:pk>/', views.MovieDetail.as_view())
+    path("", Index.as_view(), name="index"),
+    path("api/movies/", MovieList.as_view(), name="movie-list"),
+    path("api/movies/<int:pk>/", MovieDetail.as_view(), name="movie-detail")
 ]
-
-urlpatterns = format_suffix_patterns(urlpatterns)
