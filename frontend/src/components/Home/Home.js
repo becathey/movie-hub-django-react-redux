@@ -1,3 +1,5 @@
+import React from "react"
+
 const Home = () => (
     <div className="home">
         <h2>Home</h2>
