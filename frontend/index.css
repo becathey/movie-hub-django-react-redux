@@ -8,6 +8,9 @@
     --clr-secondary-blue: hsl(240, 100%, 30%);
     --clr-accent-gold: hsl(50, 100%, 50%);
     --clr-accent-coral: hsl(0, 80%, 70%);
+    --clr-gray-30: hsl(0, 0%, 30%);
+    --clr-gray-50: hsl(0, 0%, 50%);
+    --clr-gray-70: hsl(0, 0%, 70%);
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;

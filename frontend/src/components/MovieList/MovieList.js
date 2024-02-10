@@ -2,6 +2,7 @@ import React from 'react'
 import { UseSelector, useSelector } from "react-redux";
 import { getAllMovies } from "../../features/movies/movieSlice";
 import MovieCard from '../MovieCard/MovieCard';
+import './MovieList.css'
 
 const MovieList = () => {
     const movies = useSelector(getAllMovies)
@@ -11,7 +12,7 @@ const MovieList = () => {
 
     return (
         <>
-            <h2>Movies</h2>
+            <h2>Top Movies</h2>
             <div className='movie-container'>{renderedMovies}</div>
         </>
     )
