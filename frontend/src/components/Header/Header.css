@@ -22,3 +22,6 @@
 .nav-content .nav-link {
     margin: 0 0.5rem;
 }
+.active {
+    border-bottom: 2px solid var(--clr-accent-gold);
+}

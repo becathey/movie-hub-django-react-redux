@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import './Header.css'
 
 const Header = () => (
@@ -8,7 +8,7 @@ const Header = () => (
             <Link to="/home" className="nav-link">Movie Hub</Link>
         </div>
         <div className="nav-content">
-            <Link to="/about" className="nav-link">About</Link>
+            <NavLink to="/about" className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>About</NavLink>
         </div>
     </nav>
 )
