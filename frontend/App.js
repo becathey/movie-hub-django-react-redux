@@ -4,6 +4,7 @@ import { UseDispatch, useDispatch } from 'react-redux'
 import { addMovies } from './src/features/movies/movieSlice'
 import Header from './src/components/Header/Header'
 import Footer from './src/components/Footer/Footer'
+import MovieList from './src/components/MovieList/MovieList'
 import './App.css'
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
     return (
         <div className='App'>
             <Header />
-            <h2>Movies</h2>
+            <MovieList />
             <Footer />
         </div>
     )
