@@ -6,8 +6,14 @@ export const fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies', asyn
     return result.data
 })
 
+export const fetchAsyncMovieDetail = createAsyncThunk('movies/fetchAsyncMovieDetail', async (id) => {
+    const result = await axios(`/movies/api/movies/${id}/`)
+    return result.data
+})
+
 const initialState = {
-    movies: []
+    movies: [],
+    selectMovie: {}
 }
 
 const movieSlice = createSlice({
@@ -30,21 +36,14 @@ const movieSlice = createSlice({
             .addCase(fetchAsyncMovies.rejected, () => {
                 console.log("Rejected")
             })
+            .addCase(fetchAsyncMovieDetail.fulfilled, (state, {payload}) => {
+                console.log("Fetched Successfully")
+                return {...state, selectMovie: payload}
+            })
     },
-    // extraReducers: {
-    //     [fetchAsyncMovies.pending]: () => {
-    //         console.log("Pending")
-    //     },
-    //     [fetchAsyncMovies.fulfilled]: (state, {payload}) => {
-    //         console.log("Fetched Successfully")
-    //         return {...state, movies: payload}
-    //     },
-    //     [fetchAsyncMovies.rejected]: () => {
-    //         console.log("Rejected")
-    //     }
-    // }
 })
 
 export const {addMovies} = movieSlice.actions
 export const getAllMovies = (state) => state.movies.movies
+export const getSelectedMovie = (state) => state.movies.selectMovie
 export default movieSlice.reducer

@@ -1,0 +1,89 @@
+.detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.detail-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 800px;
+    background-color: var(--clr-primary-white);
+    padding: 1rem;
+    border: 1px solid var(--clr-primary-black);
+    border-radius: 20px;
+    margin: 2rem;
+    box-shadow: 0px 0px 10px 1px var(--clr-gray-70);
+}
+.detail-image {
+    width: 100%;
+    max-width: 400px;
+}
+.detail-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.detail-title {
+    color: var(--clr-accent-coral);
+    margin: 0;
+}
+.detail-director {
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-style: italic;
+    margin: 0;
+}
+.detail-year {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 0;
+}
+.detail-genre {
+    background-color: var(--clr-secondary-blue);
+    color: var(--clr-primary-white);
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.75rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+.detail-description {
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+.detail-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.detail-buttons button {
+    background-color: var(--clr-primary-white);
+    width: 45%;
+    font: inherit;
+    font-weight: bold;
+    padding: 0.5rem;
+    border: 2px solid var(--clr-secondary-blue);
+    border-radius: 25px;
+    transition: all 0.5s ease;
+}
+.detail-buttons button:hover {
+    background-color: var(--clr-secondary-blue);
+    color: var(--clr-primary-white);
+}
+
+@media (min-width: 40em) {
+    .detail-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 360px) {
+    .detail-buttons {
+        flex-direction: column;
+    }
+    .detail-buttons button {
+        width: 100%;
+        margin: 5px auto;
+    }
+}
