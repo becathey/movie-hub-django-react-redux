@@ -20,7 +20,10 @@ const MovieDetail = () => {
 
     return (
         <div className='detail-container'>
-            <div className='detail-card'>
+            {Object.keys(data).length === 0 ? (
+                <h1>Loading ...</h1>
+            ) : (
+                <div className='detail-card'>
                 <div className='detail-image-wrapper'>
                     <img src={data.image} className='detail-image' />
                 </div>
@@ -38,6 +41,7 @@ const MovieDetail = () => {
                     </div>
                 </div>
             </div>
+            )}
         </div>
     )
 }
