@@ -1,8 +1,7 @@
 import React, {useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchAsyncMovieDetail } from '../../features/movies/movieSlice'
-import { getSelectedMovie } from '../../features/movies/movieSlice'
+import { fetchAsyncMovieDetail, getSelectedMovie, removeSelectedMovie } from '../../features/movies/movieSlice'
 import './MovieDetail.css'
 
 const MovieDetail = () => {
@@ -13,6 +12,10 @@ const MovieDetail = () => {
 
     useEffect(() => {
         dispatch(fetchAsyncMovieDetail(id))
+
+        return () => {
+            dispatch(removeSelectedMovie())
+        }
     }, [dispatch, id])
 
     return (
