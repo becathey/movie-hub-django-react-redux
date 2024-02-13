@@ -41,6 +41,14 @@ SECRET_KEY='<create-and-add-your-secret-key-here>'
 
 The .env file should be added to a .gitignore file to protect your secret key.
 
+## Apply Migrations
+
+To create sqlite3 database, apply migrations by running:
+
+```
+python manage.py migrate
+```
+
 ## Run the App
 
 To run the backend in development mode, run:
@@ -56,6 +64,22 @@ npm run dev
 ```
 
 Open [http://localhost:8000](http://localhost:8000) in the browser to view the application.
+
+## Create Superuser
+
+To create a superuser account for login, run:
+
+```
+python manage.py createsuperuser
+```
+
+Set username, email, and password
+
+## Add Test Data
+
+Open [http://localhost:8000/admin](http://localhost:8000/admin) in the browser to log in to the superuser account.
+
+Click Add icon next to Movies to create movie instances.
 
 ## Deploy the App
 
